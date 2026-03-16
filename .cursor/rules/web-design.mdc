@@ -1,0 +1,26 @@
+---
+description: Standards for converting Figma designs to Next.js with Tailwind CSS
+globs: ["src/components/**/*.tsx", "src/app/**/*.tsx"]
+alwaysApply: true
+---
+
+# Design-to-Code Standards
+
+## 1. Responsive Strategy
+- **Mobile-First Always:** Apply base styles for mobile, then use `md:` (tablet) and `lg:` (desktop) prefixes.
+- **Breakpoint Consistency:** Use Tailwind's default breakpoints: `sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`.
+- **Layout Logic:** When Figma shows a layout change (e.g., Grid to Stack), use Flexbox or CSS Grid with responsive classes (e.g., `grid-cols-1 md:grid-cols-2`).
+
+## 2. Component Architecture
+- **Shadcn/UI Integration:** Prioritize using Shadcn components. Customize them using `tailwind.config.ts` rather than hardcoding colors.
+- **Client vs Server:** Default to Server Components. Use `'use client'` only for interactive elements (buttons, forms, modals).
+- **Icons:** Use `lucide-react` for all icons unless specified.
+
+## 3. Styling & Tokens
+- **No Hardcoded Values:** Never use `text-[#333333]`. Map colors to `tailwind.config.ts` (e.g., `text-primary` or `text-muted-foreground`).
+- **Typography:** Match Figma font-weights and line-heights exactly using Tailwind's arbitrary values if tokens aren't set yet (e.g., `leading-[1.2]`).
+- **Images:** Use the Next.js `<Image />` component with `placeholder="blur"` for all Figma-exported assets.
+
+## 4. Automation with Figma
+- If a Figma URL is provided, use the **Figma MCP tool** to fetch variables and spacing.
+- Cross-reference Figma "Auto Layout" settings to determine if a container should be `flex` or `grid`.
