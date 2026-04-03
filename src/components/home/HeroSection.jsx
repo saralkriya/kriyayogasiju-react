@@ -14,22 +14,12 @@ export function HeroSection() {
         />
         <div className="max-w-3xl space-y-4 text-center text-sm leading-relaxed md:text-base">
           <p>
-            Kriya Yoga is an umbrella term for the most ancient set of
-            practices in Monistic Shaiva Tantra. It takes a disinterested view
-            at mundane existence and elucidates progressive steps for liberating
-            the individual soul.
+          Kriya Yoga is an umbrella term for the most ancient set of practices in Monistic Shaiva Tantra. It famously takes a disinterested view at mundane existence and elucidates prayogas soley for liberating the individual soul. As a result, since the beginning of the last Kali Yuga, it has been practiced mostly by renunciates in the Indian subcontinent. It takes a very pragmatic view of human evolution and employs techniques to raise Individual Prana or Kundalini. It is said that the complete set of 114 Kriyas were transmitted to the Saptharishis by Lord Sadashiva. As such, there are multiple lineages in Kriya Yoga tracing their origin to one of the Saptharishis. Also, in each of these lineages, there are one or more charismatic long-living Mula Gurus tasked with guiding disciples across yugas until their own dissolution.
           </p>
           <p>
-            Since the beginning of the last Kali Yuga, it has been practiced
-            mostly by renunciants in the Indian subcontinent. It offers a
-            deeply pragmatic view of human evolution and employs techniques to
-            raise individual prana or kundalini.
+          The Mula Guru in our Kriya Yoga lineage is the immortal yogi Maha Avathara Babaji. It is interesting to note that most of the well-known Kriya Yoga lineages trace their origins to this great disciple of Saptharishi Agasthya. Kriya Yoga is also considered a part of the Siddha tradition. The first Siddha is of course the absolute lord of the known and unknown universe – Bhagwan Sadashiva.
           </p>
-          <p>
-            The complete set of Kriyas were transmitted to the Saptharishis by
-            Lord Sadashiva. Through this tradition, sincere aspirants are given
-            clear, structured methods to trace their origin to the one Self.
-          </p>
+
         </div>
       </div>
     </SectionWrapper>
