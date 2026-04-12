@@ -1,0 +1,266 @@
+:root {
+  --queries-orange: #d95427;
+  --queries-bg: #f2efeb;
+  --queries-text: #49423b;
+  --queries-muted: #7a726b;
+  --queries-input-bg: #f7f5f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--queries-bg);
+  color: var(--queries-text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.queries-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* keep navbar aligned like other pages */
+.site-header .container {
+  width: min(1400px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.queries-hero {
+  background: var(--queries-orange);
+  padding: 26px 0 34px;
+}
+
+.queries-hero-inner {
+  text-align: center;
+}
+
+.queries-hero h1 {
+  margin: 18px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+  color: #fff6f0;
+}
+
+.queries-main {
+  padding: 36px 0 28px;
+}
+
+.queries-intro {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #5e5550;
+}
+
+.queries-intro p {
+  margin: 0;
+}
+
+.form-section {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.queries-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: #554d46;
+}
+
+.form-field label span {
+  color: var(--queries-orange);
+  margin-left: 2px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1.5px solid transparent;
+  background: var(--queries-input-bg);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: #3a342f;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #b0a8a1;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #6e6761;
+  box-shadow: 0 0 0 2px rgba(110, 103, 97, 0.08);
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-card {
+  flex: 1;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--queries-input-bg);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  color: #7f7770;
+}
+
+.radio-card input {
+  width: auto;
+  margin: 0;
+  accent-color: #6e6761;
+}
+
+.radio-card-active {
+  border-color: #6e6761;
+  color: #3a342f;
+  background: #f6f4f1;
+}
+
+.form-note {
+  max-width: 760px;
+  margin: 36px 0 0;
+  font-size: 0.9rem;
+  color: #6d655f;
+}
+
+.submit-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.submit-btn {
+  min-width: 310px;
+  border: none;
+  border-radius: 999px;
+  background: var(--queries-orange);
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.95;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.queries-footer {
+  border-top: 1px solid #e7e0da;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6f6760;
+}
+
+/* tablet */
+@media (max-width: 991px) {
+  .queries-hero {
+    padding: 24px 0 28px;
+  }
+
+  .queries-main {
+    padding: 30px 0 22px;
+  }
+
+  .queries-intro,
+  .form-section {
+    max-width: 720px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .queries-container {
+    width: min(100%, 92%);
+  }
+
+  .queries-hero {
+    padding: 18px 0 22px;
+  }
+
+  .queries-hero h1 {
+    margin-top: 10px;
+  }
+
+  .queries-main {
+    padding: 24px 0 18px;
+  }
+
+  .queries-intro {
+    margin-bottom: 24px;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 320px;
+  }
+
+  .form-note {
+    margin-top: 28px;
+    font-size: 0.88rem;
+  }
+}

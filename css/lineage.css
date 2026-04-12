@@ -1,0 +1,285 @@
+/**
+ * Our Lineage page — matches desktop + mobile Figma-style mockups
+ * Cream body #FDF9F3, orange header, 20px image radius
+ */
+:root {
+  --ky-lin-orange: #d95427;
+  --ky-lin-orange-deep: #c94a20;
+  --ky-lin-cream: #fdf9f3;
+  --ky-lin-ink: #1a1a1a;
+  --ky-lin-img-radius: 20px;
+  --ky-lin-font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --ky-lin-font-body: "Inter", system-ui, sans-serif;
+}
+
+body.ky-body-lineage {
+  font-family: var(--ky-lin-font-body);
+  color: var(--ky-lin-ink);
+  background-color: var(--ky-lin-cream);
+  top: 0 !important;
+}
+
+body.ky-body-lineage h1,
+body.ky-body-lineage h2,
+body.ky-body-lineage h3,
+body.ky-body-lineage .ky-lin-display {
+  font-family: var(--ky-lin-font-display);
+  font-weight: 600;
+}
+
+.ky-lin-hero {
+  background: linear-gradient(180deg, var(--ky-lin-orange) 0%, var(--ky-lin-orange-deep) 100%);
+  color: #fff;
+  padding-bottom: 2.5rem;
+}
+
+.ky-lin-navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.ky-lin-navbar .ky-lin-brand-mobile {
+  font-family: var(--ky-lin-font-body);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff !important;
+  letter-spacing: 0.02em;
+}
+
+.ky-lin-navbar .nav-link {
+  font-family: var(--ky-lin-font-body);
+  color: rgba(255, 255, 255, 0.98) !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem !important;
+}
+
+.ky-lin-navbar .nav-link:hover,
+.ky-lin-navbar .nav-link:focus {
+  color: #fff !important;
+  opacity: 0.85;
+}
+
+.ky-lin-navbar .nav-link.active {
+  color: #fff !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Pill language toggle (English | മലയാളം) */
+.ky-lin-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.ky-lin-lang-seg {
+  border: none;
+  margin: 0;
+  padding: 0.45rem 1.1rem;
+  font-family: var(--ky-lin-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  background: transparent;
+  border-radius: 999px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ky-lin-lang-seg:hover {
+  color: #fff;
+}
+
+.ky-lin-lang-seg:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
+.ky-lin-lang-seg.active {
+  background: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Google Translate: keep widget off-screen; hide top banner */
+#google_translate_element {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.ky-body-lineage .skiptranslate,
+.ky-body-lineage .goog-te-banner-frame,
+.ky-body-lineage iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.ky-lin-navbar > .container.ky-lin-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .ky-lin-navbar.navbar-expand-lg .ky-lin-nav-collapse {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .ky-lin-nav-row {
+    flex-wrap: nowrap !important;
+  }
+
+  .ky-lin-nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem 0.35rem;
+  }
+
+  .ky-lin-nav-links .nav-link {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ky-lin-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .ky-lin-navbar .ky-lin-nav-collapse {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .ky-lin-navbar .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+.ky-lin-hero-title {
+  font-family: var(--ky-lin-font-display);
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  letter-spacing: 0.02em;
+}
+
+.ky-lin-hero-intro {
+  max-width: 42rem;
+  margin-inline: auto;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.ky-lin-hero-photos img {
+  border-radius: var(--ky-lin-img-radius);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  max-height: 220px;
+}
+
+@media (min-width: 992px) {
+  .ky-lin-hero-photos {
+    display: none !important;
+  }
+}
+
+.ky-lin-main {
+  padding-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ky-lin-section-title {
+  font-family: var(--ky-lin-font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  color: var(--ky-lin-ink);
+}
+
+.ky-lin-block-title {
+  font-family: var(--ky-lin-font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  margin-bottom: 1rem;
+  color: var(--ky-lin-ink);
+}
+
+.ky-lin-block-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.ky-lin-block-img {
+  border-radius: var(--ky-lin-img-radius);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.ky-lin-row-block {
+  margin-bottom: 0;
+}
+
+.ky-lin-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: clamp(2rem, 4vw, 2.75rem) auto;
+  max-width: 280px;
+  color: var(--ky-lin-orange);
+}
+
+.ky-lin-divider::before,
+.ky-lin-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  opacity: 0.9;
+}
+
+.ky-lin-divider .ky-lin-diamond {
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.ky-lin-footer {
+  text-align: center;
+  padding: 1.75rem 1rem 2.25rem;
+  font-size: 0.875rem;
+  color: #444;
+  background-color: var(--ky-lin-cream);
+}

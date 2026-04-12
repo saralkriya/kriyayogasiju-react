@@ -1,0 +1,251 @@
+:root {
+  --ky-orange: #d95423;
+  --ky-white-soft: #fff7f2;
+}
+
+/* Header / Navbar */
+.site-header {
+  background: var(--ky-orange);
+  padding: 10px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.container {
+  width: min(1400px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  align-items: center;
+  min-height: 78px;
+  gap: 18px;
+  position: relative;
+}
+
+.site-logo-link {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background: #fff;
+  color: #d95423;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.translate-box {
+  min-width: 145px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: end;
+}
+
+/* Google Translate */
+#google_translate_element {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+  color: transparent !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 12px !important;
+  font-weight: 600;
+  color: #222 !important;
+  background: #fff !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+.skiptranslate iframe {
+  display: none !important;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-te-menu-frame {
+  z-index: 99999 !important;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 1024px) {
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    padding-right: 50px;
+    gap: 12px;
+  }
+
+  .site-logo {
+    height: 56px;
+  }
+
+  .translate-box {
+    min-width: auto;
+    margin-right: 16px;
+  }
+
+  .nav-center {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 12px);
+    left: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 240px;
+    background: var(--ky-orange);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    z-index: 9999;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list a {
+    width: 100%;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    min-height: 64px;
+    padding-right: 50px;
+    gap: 10px;
+  }
+
+  .site-logo {
+    height: 48px;
+  }
+
+  .nav-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+  }
+
+  .nav-list {
+    width: 260px;
+    max-width: calc(100vw - 24px);
+    gap: 10px;
+    top: calc(100% + 10px);
+  }
+
+  .nav-list a {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .goog-te-gadget .goog-te-combo {
+    font-size: 11px !important;
+    padding: 6px 8px !important;
+  }
+}
