@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  background: #faf7f1;
+  color: #555;
+  font-family: Arial, sans-serif;
+}
+
+.class-hero {
+  background: #d95423;
+  padding: 40px 20px 35px;
+  text-align: center;
+}
+
+.class-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.class-main {
+  padding: 60px 20px;
+}
+
+.timing-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.timing-row {
+  padding: 18px 0 24px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.timing-row:first-child {
+  padding-top: 0;
+}
+
+.timing-row h2 {
+  margin: 0 0 10px;
+  color: #555;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.timing-row p,
+.timing-info p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.timing-info {
+  padding-top: 30px;
+}
+
+.timing-info a {
+  color: #d95423;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.timing-info a:hover {
+  text-decoration: underline;
+}
+
+.class-footer {
+  text-align: center;
+  padding: 18px 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+.class-footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .class-hero {
+    padding: 35px 16px 30px;
+  }
+
+  .class-hero h1 {
+    font-size: 42px;
+  }
+
+  .class-main {
+    padding: 40px 16px;
+  }
+
+  .timing-card {
+    padding: 22px;
+  }
+
+  .timing-row h2 {
+    font-size: 28px;
+  }
+}
