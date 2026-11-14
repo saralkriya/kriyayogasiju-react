@@ -67,6 +67,39 @@ body {
   margin: 0 0 12px;
 }
 
+.learn-phone-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 16px 0 20px;
+  padding: 14px 18px;
+  background: #fff3e6;
+  border: 1px solid #f0c9a8;
+  border-left: 4px solid var(--learn-orange);
+  border-radius: 12px;
+}
+
+.learn-phone-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #8a4630;
+}
+
+.learn-phone-number {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #c24a1f;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.learn-phone-number:hover,
+.learn-phone-number:focus {
+  text-decoration: underline;
+}
+
 .learn-intro ol {
   margin: 0;
   padding-left: 18px;
